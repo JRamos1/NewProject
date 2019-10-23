@@ -20,7 +20,7 @@ function MainNav() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">Sign up</Nav.Link>
+            <Nav.Link href="/signup">Sign up</Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
               Sign in
             </Nav.Link>

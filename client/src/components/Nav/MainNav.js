@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
 import NavDropdown from "react-bootstrap/NavDropdown"
@@ -21,7 +20,7 @@ function MainNav() {
           </Nav>
           <Nav>
             <Nav.Link href="/signup">Sign up</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
+            <Nav.Link eventKey={2} href="/signin">
               Sign in
             </Nav.Link>
           </Nav>

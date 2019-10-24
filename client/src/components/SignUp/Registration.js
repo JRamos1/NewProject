@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Input, Submit} from "../SignUp"
 import {withRouter} from 'react-router-dom'
 import axios from 'axios'
-import Container from 'react-bootstrap'
+
 
 class Signup extends Component{
     state={

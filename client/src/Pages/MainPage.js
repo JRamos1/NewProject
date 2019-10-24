@@ -4,7 +4,7 @@ function MainPage(){
     return(
         <div>
             <MainNav/>
-           
+            
         </div>
     )
 }

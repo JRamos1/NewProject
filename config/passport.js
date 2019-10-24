@@ -56,7 +56,7 @@ console.log('testing' + emailTaken)
        lastName: req.body.lastName,
        };
 
-console.log('test2', data)
+// console.log('test2', data)
        User.create(data).then(function(newUser,created){
          if(!newUser){
            return done(null,false);
@@ -116,7 +116,7 @@ console.log('test2', data)
 
      }
 
-     console.log(user);
+    //  console.log(user);
 
      return done(null,user);
 

@@ -38,8 +38,36 @@ if (process.env.NODE_ENV === "production") {
 require('./routes/auth.js')(app);
 // Send every request to the React app
 // Define any API routes before this runs
+
+
+app.post('/api/users', function(req,res){
+  db.User.create({
+    firstName:req.body.firstName,
+    lastName:req.body.lastName,
+    email:req.body.email,
+    password:req.body.password
+  })
+  .then(function(data){
+    res.json(data)
+  })
+  .catch(function(err){
+    console.log(err, req.body.email)
+  })
+})
+
+app.get('/api/users', function(req,res){
+  db.User.findAll({
+    attributes:{exclude:
+      ['password','email']
+    }
+  }).then(function(data){
+    res.json(data)
+  })
+})
+
+
 app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
 
 db.sequelize.sync().then(function(){

@@ -2,6 +2,8 @@ import React from "react"
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
 import NavDropdown from "react-bootstrap/NavDropdown"
+import SignIn from "../SignIn/SignIn"
+
 function MainNav() {
     return(
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -10,19 +12,16 @@ function MainNav() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/">Recent</Nav.Link>
-            <NavDropdown title="Relevant Topics" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Election</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Climate</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Politics</NavDropdown.Item>
+            <NavDropdown title="Tags" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Tag 1</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Tag 2</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Tag 3</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Something else</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.4">Tag 4</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="/signup">Sign up</Nav.Link>
-            <Nav.Link eventKey={2} href="/signin">
-              Sign in
-            </Nav.Link>
+           <SignIn/>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

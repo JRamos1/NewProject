@@ -57,8 +57,8 @@ app.post('/api/users', function(req,res){
 
 app.get('/api/users', function(req,res){
   db.User.findAll({
-    attributes:{exclude:
-      ['password','email']
+    attributes:{
+      exclude: ['password','email']
     }
   }).then(function(data){
     res.json(data)
@@ -66,6 +66,19 @@ app.get('/api/users', function(req,res){
 })
 
 
+app.get("/api/curruser", function(req,res){
+  db.User.findOne({
+    where:{
+      id: req.user.id
+    },
+    attributes:{
+      exclude:["password", "email"]
+    }
+  })
+  .then(function(data){
+    res.json(data)
+  })
+})
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });

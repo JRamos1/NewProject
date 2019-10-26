@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {Input, Submit} from "../SignUp"
 import {withRouter} from 'react-router-dom'
 import axios from 'axios'
+import "./SignUp.css"
 
 
 class Signup extends Component{

@@ -46,9 +46,7 @@ class SignIn extends Component{
 
     render(){
         return(
-            <div className="container">
-                <div className="border-input container">
-                    <p className="text-center">Log in</p>
+            <form className="form-inline">
                     <Input
                     name="email"
                     onChange={this.handleInputChange}
@@ -71,8 +69,7 @@ class SignIn extends Component{
                     <Submit
                     onClick={this.handleSubmit}
                     />
-                </div>
-            </div>
+                </form>
         )
     }
 }
